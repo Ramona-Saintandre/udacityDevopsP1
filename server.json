@@ -4,36 +4,37 @@
         "client_secret": "{{env `ARM_CLIENT_SECRET`}}",
         "subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}"
     },
+
+
     "builders": [{
+        "type": "azure-arm",
+        "client_id": "{{user `client_id`}}",
+        "client_secret": "{{user `client_secret`}}",
+        "tenant_id": "{{ user `tenant_id`}}",
+        "subscription_id": "{{user `subscription_id`}}",
 
-        "builders": [{
-            "type": "azure-arm",
-            "client_id": "{{user `client_id`}}",
-            "client_secret": "{{user `client_secret`}}",
-            "tenant_id": "{{ user `tenant_id`}}",
-            "subscription_id": "{{user `subscription_id`}}",
+        "azure_tags": {
+            "webserver-env": "udacityP1",
+            "dept": "deployment",
+            "task": "Packer Image deployment",
+            "environment": "UdacityP1"
 
-            "azure_tags": {
-                "webserver-env": "udacityP1",
-                "dept": "deployment",
-                "task": "Packer Image deployment",
-                "environment": "UdacityP1"
+        },
 
-            },
-
-            "managed_image_resource_group_name": "udacityPackerProject",
-            "managed_image_name": "PackerServerImage",
+        "managed_image_resource_group_name": "udacityPackerProject",
+        "managed_image_name": "PackerServerImage",
 
 
-            "os_type": "Linux",
-            "image_publisher": "Canonical",
-            "image_offer": "UbuntuServer",
-            "image_sku": "18.04-LTS",
+        "os_type": "Linux",
+        "image_publisher": "Canonical",
+        "image_offer": "UbuntuServer",
+        "image_sku": "18.04-LTS",
 
-            "location": "East US",
-            "vm_size": "Standard_B1s"
-        }]
+        "location": "East US",
+        "vm_size": "Standard_B1s"
     }],
+
+
     "provisioners": [{
         "inline": [
             "echo 'Hello, World!' > index.html",
