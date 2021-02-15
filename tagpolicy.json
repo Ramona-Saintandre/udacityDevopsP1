@@ -1,0 +1,10 @@
+{
+    "if": {
+        "allof": [
+            { "value": "[less(length(field('tags')), 1)]", "equals": "true" }
+        ]
+    },
+    "then": {
+        "effect": "deny"
+    }
+}

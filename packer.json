@@ -1,0 +1,41 @@
+{
+    "builders": [{
+        "type": "azure-arm",
+
+        "client_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "client_secret": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+        "tenant_id": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+        "subscription_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx",
+
+        "managed_image_resource_group_name": "UdacityP1",
+        "managed_image_name": "PackerServerImage",
+
+        "os_type": "Linux",
+        "image_publisher": "Canonical",
+        "image_offer": "UbuntuServer",
+        "image_sku": "16.04-LTS",
+
+        "azure_tags": {
+            "webserver-env": "UdacityP1",
+            "dept": "deployment",
+            "task": "Packer Image deployment"
+        },
+
+        "location": "East US",
+        "vm_size": "Standard_DS2_v2"
+    }],
+    "provisioners": [{
+        "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
+        "inline": [
+            "apt-get update",
+            "apt-get upgrade -y",
+            "apt-get -y install nginx",
+            "echo 'Hello, World!' > index.html",
+            "nohup busybox httpd -f -p 80 &",
+
+            "/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync"
+        ],
+        "inline_shebang": "/bin/sh -x",
+        "type": "shell"
+    }]
+}

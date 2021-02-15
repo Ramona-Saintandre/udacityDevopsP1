@@ -1,0 +1,30 @@
+{
+    "properties": {
+        "displayName": "tagging-policy",
+        "description": "This will deny deployment if resources that do not have tags",
+        "policyType": "Custom",
+        "mode": "Indexed",
+        "metadata": {
+            "category": "tags"
+        },
+        "parameters": {
+            "allowedLocations": {
+                "type": "String",
+                "metadata": {
+                    "description": "Tag Name",
+                    "displayName": "Tags"
+                },
+                "defaultValue": "enviornment"
+            }
+        },
+        "policyRule": {
+            "if": {
+                "field": "tags",
+                "exisits": "false"
+            }
+        },
+        "then": {
+            "effect": "deny"
+        }
+    }
+}
