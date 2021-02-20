@@ -46,17 +46,31 @@
   `location            = "westus2"`
   `resource_group_name = azurerm_resource_group.rg.name`
 
-  `security_rule {`
-    `name                       = "SSH"`
-    `priority                   = 1001`
-    `direction                  = "Inbound"`
-    `access                     = "Allow"`
-    `protocol                   = "Tcp"`
-    `source_port_range          = "*"`
-    `destination_port_range     = "22"`
-    `source_address_prefix      = "*"`
-    `destination_address_prefix = "*"`
+  **`security_rule {`** 
+    `name                       = "SSH"`  
+    `priority                   = 1001`  
+    `direction                  = "Inbound"`  
+    `access                     = "Allow"`  
+    `protocol                   = "Tcp"`  
+    `source_port_range          = "*"`  
+    `destination_port_range     = "22"`  
+    `source_address_prefix      = "*"`  
+    `destination_address_prefix = "*"`  
   `}`  
 
+13. Create the **NIC** -(network interface card)  
+    
+    ``resource "azurerm_network_interface" "nic01" {
+    name  = "UdacityP1_nic01 "  
+    location = "eastus"  
+    resource_group_name = azurerm_resource_group.rg.name  
+    network_security_group_id = azurerm_network_security_group.nsg.id   
+    ip_configuration {  
+    name = "UdacityP1_ipconfig"  
+    subnet_id = azurerm_subnet.subnet.id  
+    private_ip_address_allocation = "dynamic"  
+   public_ip_address_id = azurerm_public_ip.publicip.id  
+  }  
+}``  
 
  Delete the resource **`terraform destroy`**
