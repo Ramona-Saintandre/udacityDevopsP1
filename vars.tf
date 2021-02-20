@@ -10,7 +10,7 @@ resource_group = "UdacityP1"
 application_type = "webApp"
 
 # Network
-address_space = ["10.5.0.0/16"]
+//address_space = ["10.5.0.0/16"]
 address_prefix_test = "10.5.1.0/24"
 
 packer_image_id =  "/subscriptions/1d53902c-4bc6-44c8-82da-d1a59f04c098/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage"
