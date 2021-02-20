@@ -36,6 +36,24 @@
    `location = "eastus"` 
    `resource_group_name = azurerm_resource_group.rg.name`     
    `Allocation_method = "Static"`  
-   `}`  
+   `}` 
+12. Create the **network security group and rule**
+```resource "azurerm_network_security_group" "nsg" {
+  name                = "nsg-sshallow-001 "
+  location            = "westus2"
+  resource_group_name = azurerm_resource_group.rg.name
+
+  security_rule {
+    name                       = "SSH"
+    priority                   = 1001
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "22"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }```
+
 
  Delete the resource `terraform destroy`
