@@ -22,6 +22,24 @@ resource "azurerm_resource_group" "UdacityP1" {
   }
 }
 
+# Create network security group
+resource "azurerm_network_security_group" "UdacityP1" {
+  name                = "UdacityP1-security-group"
+  location            = azurerm_resource_group.UdacityP1.location
+  resource_group_name = azurerm_resource_group.UdacityP1.name
+
+  security_rule {
+        name                       = "SSH"
+        priority                   = 1001
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "TCP"
+        source_port_range          = "*"
+        destination_port_range     = "22"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+}
+
 # Create virtual network
 resource "azurerm_virtual_network" "UdacityP1" {
   name                = "UdacityP1-vnet"
@@ -56,10 +74,10 @@ resource "azurerm_public_ip" "UdacityP1" {
   }
 }
 
-subscription_id = "1d53902c-4bc6-44c8-82da-d1a59f04c098"
-client_id = "129af8a1-a479-4e19-8e7a-10a633a172e6"
-client_secret = "IF79ZP2xDzyR~tbfKEOAFAf72Kdmrsb8Sb"
-tenant_id = "38e23809-f428-4d08-9f4e-b3b8b2df585c"
+# subscription_id = "1d53902c-4bc6-44c8-82da-d1a59f04c098"
+# client_id = "129af8a1-a479-4e19-8e7a-10a633a172e6"
+# client_secret = "IF79ZP2xDzyR~tbfKEOAFAf72Kdmrsb8Sb"
+# tenant_id = "38e23809-f428-4d08-9f4e-b3b8b2df585c"
 
 # Resource Group/Location
 location = "eastus"
@@ -73,23 +91,7 @@ address_prefix_test = "10.5.1.0/24"
 packer_image_id =  "/subscriptions/1d53902c-4bc6-44c8-82da-d1a59f04c098/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage"
 vm_count = 2
 
-# Create network security group
-resource "azurerm_network_security_group" "UdacityP1" {
-  name                = "UdacityP1-security-group"
-  location            = azurerm_resource_group.UdacityP1.location
-  resource_group_name = azurerm_resource_group.UdacityP1.name
 
-  security_rule {
-        name                       = "SSH"
-        priority                   = 1001
-        direction                  = "Inbound"
-        access                     = "Allow"
-        protocol                   = "TCP"
-        source_port_range          = "*"
-        destination_port_range     = "22"
-        source_address_prefix      = "*"
-        destination_address_prefix = "*"
-}
   }
 
 # VM security rules

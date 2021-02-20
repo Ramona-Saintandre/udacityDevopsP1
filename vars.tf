@@ -1,17 +1,58 @@
-# Azure subscription vars
-subscription_id = "1d53902c-4bc6-44c8-82da-d1a59f04c098"
-client_id = "129af8a1-a479-4e19-8e7a-10a633a172e6"
-client_secret = "IF79ZP2xDzyR~tbfKEOAFAf72Kdmrsb8Sb"
-tenant_id = "38e23809-f428-4d08-9f4e-b3b8b2df585c"
+variable "system" {
+    type = string
+    description = "Name of the system or environment"
+}
 
-# Resource Group/Location
-location = "eastus"
-resource_group = "UdacityP1"
-application_type = "webApp"
+variable "servername" {
+    type = string
+    description = "Server name of the virtual machine"
+}
 
-# Network
-//address_space = ["10.5.0.0/16"]
-address_prefix_test = "10.5.1.0/24"
+variable "location" {
+    type = string
+    description = "Azure location of terraform server environment"
+    default = "westus2"
 
-packer_image_id =  "/subscriptions/1d53902c-4bc6-44c8-82da-d1a59f04c098/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage"
-vm_count = 2
+}
+
+variable "admin_username" {
+    type = string
+    description = "Administrator username for server"
+}
+
+variable "admin_password" {
+    type = string
+    description = "Administrator password for server"
+}
+
+variable "vnet_address_space" { 
+    type = list
+    description = "Address space for Virtual Network"
+    default = ["10.0.0.0/16"]
+}
+
+variable "managed_disk_type" { 
+    type = map
+    description = "Disk type Premium in Primary location Standard in DR location"
+
+    default = {
+        westus2 = "Premium_LRS"
+        eastus = "Standard_LRS"
+    }
+}
+
+variable "vm_size" {
+    type = string
+    description = "Size of VM"
+    default = "Standard_B1s"
+}
+
+variable "os" {
+    description = "OS image to deploy"
+    type = object({
+        publisher = string
+        offer = string
+        sku = string
+        version = string
+  })
+}     
