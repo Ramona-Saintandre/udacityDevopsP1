@@ -22,6 +22,13 @@
 .  `address_space = ["10.0.0.0/16"] `
    `location = "eastus"` 
    `resource_group_name = azurerm_resource_group.rg.name}`  
-10. 
+10. Create the **subnet block**
+   `resource "azurerm_subnet" "subnet" {`
+   `name = "UdacityP1subnet"` 
+   `resource_group_name = azurerm_resource_group.rg.name}`  
+   `virtual_network_name = azurerm_virtual_network.vnet.name`  
+   `address_prefix = "10.0.0.0/24"`
+  
+  
 
  Delete the resource `terraform destroy`
