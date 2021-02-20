@@ -30,7 +30,7 @@ variable "vm_count" {
   default     = 2
 }
 variable "admin_username" {
-  description = "The username to sign into your vms"
+  description = "Username to sign into your vms"
   default     = "thenewmona"
 }
 
