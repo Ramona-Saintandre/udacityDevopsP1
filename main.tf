@@ -1,3 +1,4 @@
+//[Building Azure Infrastructure with Terraform](https://www.youtube.com/watch?v=d6EOEXxMZ8w)
 terraform {
   required_providers {
     azurerm = {

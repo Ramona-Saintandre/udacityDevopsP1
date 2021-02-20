@@ -1,3 +1,4 @@
+//[Building Azure Infrastructure with Terraform](https://www.youtube.com/watch?v=d6EOEXxMZ8w)
 variable "system" {
     type = string
     description = "Name of the system or environment"
