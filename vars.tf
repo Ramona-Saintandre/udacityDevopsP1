@@ -6,7 +6,7 @@ tenant_id = "38e23809-f428-4d08-9f4e-b3b8b2df585c"
 
 # Resource Group/Location
 location = "eastus"
-resource_group = "udacityResources"
+resource_group = "UdacityP1"
 application_type = "webApp"
 
 # Network
