@@ -1,7 +1,7 @@
 //[Building Azure Infrastructure with Terraform](https://www.youtube.com/watch?v=d6EOEXxMZ8w)
-variable "system" {
-    type = string
-    description = "Name of the system or environment"
+variable "prefix" {
+  description = "The prefix which should be used for all resources in this example"
+  default = "UdacityP1"
 }
 
 variable "servername" {
@@ -10,13 +10,21 @@ variable "servername" {
     default = "UdacityP1-Linux"
 }
 
+variable "resource_group_name" {
+  description = "The name of the resource group in which the resources are created"
+  default     = "UdacityP1"
+}
 variable "location" {
     type = string
     description = "Azure location of terraform server environment"
-    default = "westus2"
+    default = "eastus"
 
 }
 
+variable "admin_username" {
+  description = "The username to sign into your vms"
+  default     = "thenewmona"
+}
 variable "admin_password" {
     type = string
     description = "Administrator password for server"
@@ -44,13 +52,9 @@ variable "vm_size" {
     description = "Size of VM"
     default = "Standard_B1s"
 }
+variable "packerImageId"{
+  default = "/subscriptions/1d53902c-4bc6-44c8-82da-d1a59f04c098/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage"
+}
 
-# variable "os" {
-#     description = "OS image to deploy"
-#     type = object({
-#         publisher = string
-#         offer = string
-#         sku = string
-#         version = string
-#   })
-# }     
+
+    
