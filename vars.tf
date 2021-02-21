@@ -3,11 +3,11 @@ variable "prefix" {
   description = "The prefix which should be used for all resources in this example"
   default     = "UdacityP1"
 }
-variable "azurerm_resource_group" {
-  description = "The resource group where image will be deployed"
-  default = "UdacityP1"
+# variable "azurerm_resource_group""image" {
+#   description = "The resource group where image will be deployed"
+#   default = "PackerServerImage"
   
-}
+# }
 variable "servername" {
   type        = string
   description = "Server name of the virtual machine"
@@ -19,7 +19,7 @@ variable "image" {
 }
 variable  "azurerm_image"  {
   description = "Image to be used "
-  default = "packerResourceGroup"
+  default = "PackerResourceGroup"
 }
 
 variable "packer_resource_group" {
