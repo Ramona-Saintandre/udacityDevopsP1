@@ -21,7 +21,7 @@
 
         },
 
-        "managed_image_resource_group_name": "udacityPackerProject",
+        "managed_image_resource_group_name": "UdacityP1",
         "managed_image_name": "PackerServerImage",
 
 

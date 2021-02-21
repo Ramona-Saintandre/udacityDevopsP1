@@ -37,7 +37,7 @@ variable "location" {
 
 variable "admin_username" {
   description = "The username to sign into your vms"
-  default     = "thenewmona"
+  default     = "serverAdmin"
 }
 variable "admin_password" {
   type        = string
