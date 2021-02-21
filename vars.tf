@@ -46,15 +46,19 @@ variable "managed_disk_type" {
         eastus = "Standard_LRS"
     }
 }
-
+variable "vm_count" {
+  description = "Number of VMs to create"
+  type        = number
+  default     = 2
+}
 variable "vm_size" {
     type = string
     description = "Size of VM"
     default = "Standard_B1s"
 }
-variable "packerImageId"{
-  default = "/subscriptions/1d53902c-4bc6-44c8-82da-d1a59f04c098/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage"
-}
+# variable "packerImageId"{
+#   default = "/subscriptions/1d53902c-4bc6-44c8-82da-d1a59f04c098/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage"
+# }
 
 
     
