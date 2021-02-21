@@ -72,13 +72,10 @@ resource "azurerm_network_security_group" "UdacityP1" {
     idle_timeout_in_minutes = 30
   
     tags = {
-      environment = "UdacityP1"
+      "environment" = "UdacityP1"
     }
     }
   
-
-
-
 # VM security rules
 resource "azurerm_network_security_rule" "UdacityP1vm" {
   name                        = "allow_subnet_vm_inbound"
@@ -122,7 +119,7 @@ resource "azurerm_lb" "UdacityP1" {
   tags = {
     "environment" = "UdacityP1"
   }
-
+}
 
 resource "azurerm_lb_backend_address_pool" "UdacityP1" {
   name                = "BackendPool"
@@ -150,9 +147,9 @@ resource "azurerm_lb_rule" "UdacityP1" {
 }
 
 # Specify image
-data "azurerm_resource_group" "PackerServerImage" {
-  name = "packerResourceGroup"
-}
+# data "azurerm_resource_group" "PackerServerImage" {
+#   name = "packerResourceGroup"
+# }
 data "azurerm_image" "PackerServerImage" {
   name                = var.image
   resource_group_name = data.azurerm_resource_group.image.name
