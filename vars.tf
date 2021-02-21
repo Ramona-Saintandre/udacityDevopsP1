@@ -7,6 +7,7 @@ variable "system" {
 variable "servername" {
     type = string
     description = "Server name of the virtual machine"
+    default = "UdacityP1-Linux"
 }
 
 variable "location" {
@@ -16,14 +17,10 @@ variable "location" {
 
 }
 
-variable "admin_username" {
-    type = string
-    description = "Administrator username for server"
-}
-
 variable "admin_password" {
     type = string
     description = "Administrator password for server"
+    default = "P@$$w0rd1"
 }
 
 variable "vnet_address_space" { 
