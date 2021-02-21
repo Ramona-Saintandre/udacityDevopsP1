@@ -42,6 +42,11 @@ variable "vnet_address_space" {
   default     = ["10.0.0.0/16"]
 }
 
+variable "application_port" {
+    type 	  = string
+    description = "The port that you want to expose to the external load balancer"
+    default     = 80
+}
 variable "managed_disk_type" {
   type        = map(any)
   description = "Disk type Premium in Primary location Standard in DR location"
