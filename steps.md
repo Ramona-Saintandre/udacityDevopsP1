@@ -7,7 +7,7 @@
     b. create the **resource block**  
 
  <font color=#FF0000>**Note**</font>: 
-You can run <font color=#009966> ***`teraform mft`***</font> to make sure that your file is formatted correctly.
+You can run <font color=#009966> ***`teraform fmt`***</font> to make sure that your file is formatted correctly.
  This is like `prettier`
 
 5. <font color=#0000CC>**Save**</font> `main.tf`  
