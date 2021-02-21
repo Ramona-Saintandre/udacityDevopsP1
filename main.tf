@@ -162,6 +162,7 @@ resource "azurerm_availability_set" "UdacityP1_as" {
   resource_group_name = azurerm_resource_group.UdacityP1.name
   managed             = true
 }
+
 # Create network interface
 resource "azurerm_network_interface" "UdacityP1" {
   count               = var.vm_count
@@ -170,10 +171,11 @@ resource "azurerm_network_interface" "UdacityP1" {
   resource_group_name = azurerm_resource_group.UdacityP1.name
 
   ip_configuration {
-    name                          = "UdacityP1-ni-config"
+    name                          = "UdacityP1-nic-config"
     subnet_id                     = azurerm_subnet.UdacityP1.id
     private_ip_address_allocation = "Dynamic"
   }
+}
 
 # Create linux virtual machine
 resource "azurerm_linux_virtual_machine" "UdacityP1" {
@@ -197,6 +199,7 @@ resource "azurerm_linux_virtual_machine" "UdacityP1" {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
+}
 
 resource "azurerm_managed_disk" "UdacityP1-md" {
   count                = var.vm_count
