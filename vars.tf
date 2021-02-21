@@ -48,12 +48,12 @@ variable "vm_size" {
     default = "Standard_B1s"
 }
 
-variable "os" {
-    description = "OS image to deploy"
-    type = object({
-        publisher = string
-        offer = string
-        sku = string
-        version = string
-  })
-}     
+# variable "os" {
+#     description = "OS image to deploy"
+#     type = object({
+#         publisher = string
+#         offer = string
+#         sku = string
+#         version = string
+#   })
+# }     

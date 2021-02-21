@@ -1,4 +1,4 @@
-//[Building Azure Infrastructure with Terraform](https://www.youtube.com/watch?v=d6EOEXxMZ8w)
+# [Building Azure Infrastructure with Terraform](https://www.youtube.com/watch?v=d6EOEXxMZ8w)
 terraform {
   required_providers {
     azurerm = {
@@ -11,13 +11,13 @@ terraform {
 # Configure the Microsoft Azure provider
 provider "azurerm" {
   features {}
+  
 }
 
 # Create resource group
 resource "azurerm_resource_group" "UdacityP1" {
   name     = var.resource_group_name
   location = var.location
-
   tags = {
     "environment": "UdacityP1"
   }
