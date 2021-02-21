@@ -19,12 +19,12 @@ variable "image" {
 }
 variable  "azurerm_image"  {
   description = "Image to be used "
-  default = "PackerResourceGroup"
+  default = "PackerServerImage"
 }
 
 variable "packer_resource_group" {
   description = "Name of the resource group where the packer image is"
-  default     = "PackerServerImage"
+  default     = "PackerResourceGroup"
 }
 variable "resource_group_name" {
   description = "The name of the resource group in which the resources are created"
