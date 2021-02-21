@@ -9,16 +9,21 @@ variable "servername" {
   description = "Server name of the virtual machine"
   default     = "UdacityP1-Linux"
 }
-
+variable "image" {
+    description = "The name of the Packer image used"
+    default     = "PackerServerImage"
+}
+variable "packer_resource_group" {
+  description = "Name of the resource group where the packer image is"
+  default     = "PackerServerImage"
+}
 variable "resource_group_name" {
   description = "The name of the resource group in which the resources are created"
   default     = "UdacityP1"
 }
 variable "location" {
-  type        = string
-  description = "Azure location of terraform server environment"
-  default     = "eastus"
-
+  description = "The Azure Region in which all resources in this example should be created."
+  default     = "East US"
 }
 
 variable "admin_username" {
