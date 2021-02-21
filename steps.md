@@ -34,7 +34,10 @@
     a. You should now have a **`terraform.tfstate`** file
 **Note**: Whenever you run ***`terraform apply`*** from now on you will get a **`terraform.tfstate.backup`** file keeping the original untouched  
     **Note**: ***`terraform apply -auto -approve`*** can be used if you don't have a state file 
-11. **Run** ***`terraform show`*** view your state file 
-12.  Delete the resource by running ***`terraform destroy`***
+11. **Run** ***`terraform show`*** to view your state file 
+12.  **Delete** the resource by running ***`terraform destroy`***
 
-`terraform refresh` used if you make changes outside **Terraform**
+**Note**
+This is not a best practice, but if you are working on a team, you may have somone else make changes. 
+This is known as **State Drift**
+You can do a `terraform refresh` used if you make changes outside **Terraform**
