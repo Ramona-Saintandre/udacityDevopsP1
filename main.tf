@@ -15,7 +15,7 @@ provider "azurerm" {
 }
 
 # Create resource group
-resource "azurerm_resource_group" "UdacityP1" {
+resource "azurerm_resource_group" "PackerResourceGroup" {
   name     = var.resource_group_name
   location = var.location
   tags = {
