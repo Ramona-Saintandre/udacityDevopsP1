@@ -31,4 +31,5 @@
     e. Create the **NIC** -(network interface card)  
 
 10. **Apply** Your configuration to your **Azuare** subscription by running   ***`terraform apply`***  
+    **Note**: ***`terraform apply -auto -approve`*** can be used if you don't have a state file 
 11.  Delete the resource by running ***`terraform destroy`***
