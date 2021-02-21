@@ -1,7 +1,8 @@
-1. Login -<font color=#009966>***`az login`***</font>
-2. Verify subscription -<font color=#009966>***`az account show`***</font>  
-3. Set subscription - <font color=#009966>***`az account set -s "subscription name"`***  </font>
-4. Create Terraform **config file** <font color=#009966>***`code main.tf`*** </font>   
+1. <font color=#0000CC>**Login**</font> -<font color=#009966>***`az login`***</font>
+2. <font color=#0000CC>**Verify subscription**</font> -<font color=#009966>***`az account show`***</font>  
+3. <font color=#0000CC>**Set subscription**</font> - <font color=#009966>***`az account set -s "subscription name"`***  </font>
+4. <font color=#0000CC>**Create**: 
+ </font> Terraform **config file** <font color=#009966>***`code main.tf`*** </font>   
     a. create the **provider block**   
     b. create the **resource block**  
 
@@ -9,12 +10,12 @@
 You can run <font color=#009966> ***`teraform mft`***</font> to make sure that your file is formatted correctly.
  This is like `prettier`
 
-5. Save `main.tf`  
+5. <font color=#0000CC>**Save**</font> `main.tf`  
 6. **Initialize** the configuration <font color=#009966>***`terraform init`***</font>
    
-  <font color=#FF0000>**Note**</font>: ***After running `Terraform init` a `.terraform` file is created.  
-   Add this to you `.gitignore` file.  
-   Otherwise you will have issues with version control.***  
+  <font color=#FF0000>**Note**</font>: After running ***`Terraform init`*** a ***`.terraform`***  file is created.  
+   <font color=#FF0005>*Add*</font> this to you <font color=#FF0005>***`.gitignore`***</font>  file.  
+   Otherwise you will have issues with version control. 
 
 7. <font color=#0000CC>**Run**</font> the config file to see the output - <font color=#009966>***`terraform plan -out`*** </font>   
    a. Doing `terraform plan` is a way to review, and validate your code and configuration before you check in, and deploy   
