@@ -31,6 +31,10 @@
     e. Create the **NIC** -(network interface card)  
 
 10. **Apply** Your configuration to your **Azuare** subscription by running   ***`terraform apply`***  
+    a. You should now have a **`terraform.tfstate`** file
+**Note**: Whenever you run ***`terraform apply`*** from now on you will get a **`terraform.tfstate.backup`** file keeping the original untouched  
     **Note**: ***`terraform apply -auto -approve`*** can be used if you don't have a state file 
-11. ***`terraform show`*** view your state file 
+11. **Run** ***`terraform show`*** view your state file 
 12.  Delete the resource by running ***`terraform destroy`***
+
+`terraform refresh` used if you make changes outside **Terraform**
