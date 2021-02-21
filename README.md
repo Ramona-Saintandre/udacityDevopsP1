@@ -114,7 +114,19 @@ Now that your Packer and Terraform templates are written, it's time to deploy yo
 
 Once your image is successfully deployed, you'll use Terraform to deploy your infrastructure (making sure to run `terraform plan` with the `-out` flag, and save the plan file with the name `solution.plan`) and ensure the following:
 
-* Run `'packer build'` on your Packer template with any appropriate variable arguments 
+* Run `'packer build'` on your Packer template with any appropriate variable arguments  
+* 
+  ~~~==> Wait completed after 8 minutes 7 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> azure-arm: Azure.ResourceManagement.VMImage:
+
+OSType: Linux
+ManagedImageResourceGroupName: UdacityP1
+ManagedImageName: PackerServerImage
+ManagedImageId: /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage
+ManagedImageLocation: East US~~~
+
 * Run `'terraform plan` `-out solution.plan` 
 * Deploy your Terraform infrastructure by running `'terraform apply'`
 
