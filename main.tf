@@ -146,14 +146,16 @@ resource "azurerm_lb_rule" "UdacityP1" {
   probe_id                       = azurerm_lb_probe.UdacityP1.id
 }
 
-# Specify image
-# data "azurerm_resource_group" "PackerServerImage" {
-#   name = "packerResourceGroup"
-# }
-data "azurerm_image" "PackerServerImage" {
+##Specify image
+
+data "azurerm_resource_group" "image" {
+  name  = "PackerServerImage"
+}
+  data "azurerm_image" "image" {
   name                = var.image
   resource_group_name = data.azurerm_resource_group.image.name
 }
+
 
 # Setup virtual machine availability set and scale set
 resource "azurerm_availability_set" "UdacityP1_as" {
