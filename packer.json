@@ -15,12 +15,6 @@
         "image_offer": "UbuntuServer",
         "image_sku": "16.04-LTS",
 
-        "azure_tags": {
-            "webserver-env": "UdacityP1",
-            "dept": "deployment",
-            "task": "Packer Image deployment"
-        },
-
         "location": "East US",
         "vm_size": "Standard_DS2_v2"
     }],
