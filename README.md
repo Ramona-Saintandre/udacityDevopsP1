@@ -135,7 +135,7 @@ Once your image is successfully deployed, you'll use Terraform to deploy your in
 ### Output
 ## Screenshot 1: Tagging Policy
 
-![project-images\tagpolicy-success.PNG]
+![\project-images\tagpolicy-success.PNG]
 
 ## Screenshot 2: Packer Image
 
