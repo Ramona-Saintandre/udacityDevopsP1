@@ -134,25 +134,21 @@ Once your image is successfully deployed, you'll use Terraform to deploy your in
 
 ### Output
 ## Screenshot 1: Tagging Policy
-
 ![Tagging Policy](project-images/taggingsuccess.png)
 
 ## Screenshot 2: Packer Image
-
 ![Packer Template](project-images/packer%20build%20successful.png)
 
 ## Screenshot 3: Terraform Plan
-
 ![Terraform Plan](project-images/terraform-plan-output.png)
 
 ## Screenshot 4: Terraform Apply
-
-![TerraForm Apply](final-images/terraform-apply-success.png)
+![TerraForm Apply](project-images/terraform-apply-success.png)
 
 
 ### The files included are:
 
-* /project-images: Folder containing the screenshots the results
+* ![Project Images](/project-images): Folder containing the screenshots the results
 * `main.tf`: File containing the Terraform infrastructure template
 * `vars.tf`: File containing the variables to be used in the Terraform infrastructure template
 * `server.json`: File containing the Packer image template
