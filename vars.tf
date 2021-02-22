@@ -1,17 +1,17 @@
 //[Building Azure Infrastructure with Terraform](https://www.youtube.com/watch?v=d6EOEXxMZ8w)
 variable "prefix" {
   description = "The prefix which should be used for all resources in this example"
-  default     = "PackerResourceGroup"
+  default     = "UdacityP1"
 }
-# variable "azurerm_resource_group""image" {
-#   description = "The resource group where image will be deployed"
-#   default = "PackerServerImage"
-  
-# }
+variable "azurerm_resource_group" {
+  description = "The resource group where image will be deployed"
+  default = "UdacityP1"
+
+}
 variable "servername" {
   type        = string
   description = "Server name of the virtual machine"
-  default     = "PackerResourceGroup-Linux"
+  default     = "UdacityP1-Linux"
 }
 variable "image" {
     description = "The name of the Packer image used"
@@ -24,7 +24,7 @@ variable  "azurerm_image"  {
 
 variable "packer_resource_group" {
   description = "Name of the resource group where the packer image is"
-  default     = "PackerResourceGroup"
+  default     = "packerResourceGroup"
 }
 variable "resource_group_name" {
   description = "The name of the resource group in which the resources are created"
@@ -37,7 +37,7 @@ variable "location" {
 
 variable "admin_username" {
   description = "The username to sign into your vms"
-  default     = "serverAdmin"
+  default     = "thenewmona"
 }
 variable "admin_password" {
   type        = string
@@ -79,5 +79,3 @@ variable "vm_size" {
 #   default = "/subscriptions/1d53902c-4bc6-44c8-82da-d1a59f04c098/resourceGroups/UdacityP1/providers/Microsoft.Compute/images/PackerServerImage"
 # }
 
-
-    
