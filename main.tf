@@ -149,7 +149,7 @@ resource "azurerm_lb_rule" "UdacityP1" {
 ##Specify image
 
 data "azurerm_resource_group" "image" {
-  name  = "packerResourceGroup"
+  name  = "PackerResourceGroup"
 }
   data "azurerm_image" "image" {
   name                = var.image
