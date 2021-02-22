@@ -14,14 +14,14 @@
         "subscription_id": "{{user `subscription_id`}}",
 
         "azure_tags": {
-            "webserver-env": "udacityP1",
+            "webserver-env": "PackerResourceGroup",
             "dept": "deployment",
             "task": "Packer Image deployment",
-            "environment": "UdacityP1"
+            "environment": "PackerResourceGroup"
 
         },
 
-        "managed_image_resource_group_name": "UdacityP1",
+        "managed_image_resource_group_name": "PackerResourceGroup",
         "managed_image_name": "PackerServerImage",
 
 
