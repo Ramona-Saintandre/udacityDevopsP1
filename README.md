@@ -139,7 +139,7 @@ Once your image is successfully deployed, you'll use Terraform to deploy your in
 
 ## Screenshot 2: Packer Image
 
-![Packer Template]
+![Packer Template](project-images/packer%20build%20successful.png)
 
 ## Screenshot 3: Terraform Plan
 
