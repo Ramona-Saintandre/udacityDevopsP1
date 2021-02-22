@@ -151,7 +151,7 @@ Once your image is successfully deployed, you'll use Terraform to deploy your in
 
 ### The files included are:
 
-* ![Project Images](/project-images): Folder containing the screenshots the results
+* [Project Images](/project-images): Folder containing the screenshots the results
 * `main.tf`: File containing the Terraform infrastructure template
 * `vars.tf`: File containing the variables to be used in the Terraform infrastructure template
 * `server.json`: File containing the Packer image template
