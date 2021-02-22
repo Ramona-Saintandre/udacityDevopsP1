@@ -137,13 +137,13 @@ Once your image is successfully deployed, you'll use Terraform to deploy your in
 ![Tagging Policy](project-images/taggingsuccess.png)
 
 ## Screenshot 2: Packer Image
-![Packer Template](project-images/packer%20build%20successful.png)
+![Packer Template](project-images/packerbuild-success.png)
 
 ## Screenshot 3: Terraform Plan
-![Terraform Plan](/project-images/terraformplanoutput.png)
+![Terraform Plan](project-images/terraformplanoutput.png)
 
 ## Screenshot 4: Terraform Apply
-![TerraForm Apply](/project-images/terraform-apply-success.png)
+![TerraForm Apply](project-images/terraform-apply-success.png)
 
 ## Screenshot 5: TerraForm Destroy
 ![TerraForm Destroy](project-images/terraformdestroysuccess.png)
