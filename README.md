@@ -143,7 +143,7 @@ Once your image is successfully deployed, you'll use Terraform to deploy your in
 
 ## Screenshot 3: Terraform Plan
 
-![Terraform Plan]
+![Terraform Plan]()
 
 ## Screenshot 4: Terraform Apply
 
