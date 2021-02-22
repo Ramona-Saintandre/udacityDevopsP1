@@ -1,7 +1,7 @@
 //[Building Azure Infrastructure with Terraform](https://www.youtube.com/watch?v=d6EOEXxMZ8w)
 variable "prefix" {
   description = "The prefix which should be used for all resources in this example"
-  default     = "UdacityP1"
+  default     = "PackerResourceGroup"
 }
 # variable "azurerm_resource_group""image" {
 #   description = "The resource group where image will be deployed"
@@ -11,7 +11,7 @@ variable "prefix" {
 variable "servername" {
   type        = string
   description = "Server name of the virtual machine"
-  default     = "UdacityP1-Linux"
+  default     = "PackerResourceGroup-Linux"
 }
 variable "image" {
     description = "The name of the Packer image used"
@@ -28,7 +28,7 @@ variable "packer_resource_group" {
 }
 variable "resource_group_name" {
   description = "The name of the resource group in which the resources are created"
-  default     = "UdacityP1"
+  default     = "PackerResourceGroup"
 }
 variable "location" {
   description = "The Azure Region in which all resources in this example should be created."

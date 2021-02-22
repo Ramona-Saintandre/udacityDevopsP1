@@ -215,7 +215,7 @@ resource "azurerm_managed_disk" "PackerResourceGroup-md" {
 
 resource "azurerm_virtual_machine_data_disk_attachment" "PackerResourceGroup" {
   count              = var.vm_count
-  managed_disk_id    = azurerm_managed_disk.PackerResourceGroup1-md[count.index].id
+  managed_disk_id    = azurerm_managed_disk.PackerResourceGroup-md[count.index].id
   virtual_machine_id = azurerm_linux_virtual_machine.PackerResourceGroup[count.index].id
   lun                = "10"
   caching            = "ReadWrite"
