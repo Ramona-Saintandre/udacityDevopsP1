@@ -143,11 +143,11 @@ Once your image is successfully deployed, you'll use Terraform to deploy your in
 
 ## Screenshot 3: Terraform Plan
 
-![Terraform Plan]()
+![Terraform Plan](project-images/terraform-plan-output.png)
 
 ## Screenshot 4: Terraform Apply
 
-![TerraForm Apply]
+![TerraForm Apply](final-images/terraform-apply-success.png)
 
 
 ### The files included are:
