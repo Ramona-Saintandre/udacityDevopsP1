@@ -2,9 +2,9 @@
     "builders": [{
         "type": "azure-arm",
 
-        "client_id": "7ff374bb-499a-4497-befe-f389d2d3ad5f",
-        "client_secret": "crhPmBG.8f4aZqw29mvM2m8sKLAIiiKvJ",
-        "tenant_id": "772e0cc6-e8e5-4b37-8275-efc17217a01b",
+        "client_id": "129af8a1-a479-4e19-8e7a-10a633a172e6",
+        "client_secret": "IF79ZP2xDzyR~tbfKEOAFAf72Kdmrsb8Sb",
+        "tenant_id": "38e23809-f428-4d08-9f4e-b3b8b2df585c",
         "subscription_id": "60a3bcd2-38b8-4af0-b4ac-e37c7b87d3da",
 
         "managed_image_resource_group_name": "packerResourceGroup",
