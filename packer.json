@@ -15,6 +15,7 @@
         "image_offer": "UbuntuServer",
         "image_sku": "16.04-LTS",
 
+
         "location": "East US",
         "vm_size": "Standard_DS2_v2"
     }],
